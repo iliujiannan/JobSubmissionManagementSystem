@@ -22,6 +22,7 @@ class JobSubmission(models.Model):
     job_submission_id = models.IntegerField(primary_key=True)
     student_id = models.IntegerField(max_length=11)
     sub_time = models.DateTimeField()
+    job_id = models.IntegerField(11)
 
 
 
