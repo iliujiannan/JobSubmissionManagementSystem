@@ -5,9 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-    <form action="/createjob">
-        作业名：<input type="text" name="job_name">
-        人  数：<input type="text" name="total_num">
+    <form action="/jobcreating" method="post">
+        作业名：<input type="text" name="job_title"><br>
+        人  数：<input type="text" name="total_num"><br>
+        结束时间：<input type="datetime" name="end_time"><br>
         <input type="submit" value="创建作业">
     </form>
 </body>

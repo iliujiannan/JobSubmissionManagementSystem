@@ -7,9 +7,14 @@ from web.controller.dologin import login_service
 import json
 from web.controller.SubmitJobService import submit_job
 from django.views.decorators.csrf import csrf_exempt
+from web.controller.CreateJob import create_job
 from web.controller.getWorkInfo import *
 
 # Create your views here.
+
+def login(request):
+    return render_to_response('login.html')
+
 
 @csrf_exempt
 def f(request):
@@ -23,8 +28,10 @@ def f(request):
 def c(request):
     return render_to_response('createjob.html')
 
+
 def hide(request):
     return render_to_response('admin.html')
+#def allwork(request):
 
 @csrf_exempt
 def view_submit_job(request):
@@ -39,8 +46,15 @@ def view_submit_job(request):
     return render_to_response('index.html')
 
 
-def login(request):
-    return render_to_response('login.html')
+
+
+@csrf_exempt
+def job_create(request):
+    job_title = request.POST.get('job_title')
+    end_time = request.POST.get('end_time')
+    total_num = request.POST.get('total_num')
+    result = json.dumps(create_job(job_title, end_time, total_num))
+    return HttpResponse(result)
 
 
 def doLogin(request):
