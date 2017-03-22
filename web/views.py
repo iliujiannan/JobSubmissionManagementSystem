@@ -64,4 +64,8 @@ def work_list(request):
 def allwork(request):
     return render_to_response('showwork.html',{'data':getAllJobInfoAsList()})
 def restUser(request):
-    request.GET.get('job_id')
+    print(request.GET.get('job_id'))
+    return HttpResponse(json.dumps(getRestUser(request.GET.get('job_id'))))
+def showreset(request):
+    r = getRestUser(request.GET.get('job_id'))
+    return render_to_response('restuser.html',{'data':r})

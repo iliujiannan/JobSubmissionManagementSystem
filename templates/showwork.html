@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+      <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
     <meta charset="UTF-8">
     <title>所有作业</title>
 </head>
@@ -23,7 +24,7 @@
             <td>{{ i.end_time }}</td>
             <td>{{ i.total_num }}</td>
             <td>{{ i.submit_num }}</td>
-            <td>{{ i.other_num}} <form action="" method="get" > <input type="submit" value="查看" ></form></td>
+            <td>{{ i.other_num}} <form action="/showreset" method="get"><input type="hidden" name="job_id"  value="{{ i.job_id }}"><input type="submit"  value="查看" ></form> </td>
         </tr>
         {% endfor %}
 

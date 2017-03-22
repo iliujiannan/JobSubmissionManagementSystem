@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from web.views import login, doLogin, f, view_submit_job, hide, c, allwork,work_list
 
+from web.views import login, doLogin, f, view_submit_job, hide, c, allwork, restUser, showreset, work_list
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^submit_job', view_submit_job),
     url(r'^c', c),
     url(r'^allwork',allwork),
-    url(r'^therest',)
+    url(r'^therest',restUser),
+    url(r'^showreset',showreset)
 ]
