@@ -79,7 +79,7 @@
     $("#button").click(function () {
         var UserName = document.getElementById("UserName").value;
         var PassWord = document.getElementById("PassWord").value;
-        var url = "/dologin?UserNumber=" + UserName + "&PassWord=" + PassWord;
+        var url = "/dologin?num=" + UserName + "&PassWord=" + PassWord;
         $.get(url, function (result) {
             var obj = eval('(' + result + ')');
             if(obj.state==0)
