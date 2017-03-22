@@ -16,6 +16,8 @@ class Job(models.Model):
     job_title = models.CharField(max_length=255)
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
+    total_num = models.IntegerField()
+    submit_num = models.IntegerField()
 
 
 class JobSubmission(models.Model):

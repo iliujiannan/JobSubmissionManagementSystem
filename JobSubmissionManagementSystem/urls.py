@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from web.views import login, doLogin, f, view_submit_job,hide
+from web.views import login, doLogin, f, view_submit_job, hide, c
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^hide', hide),
     url(r'^e', f),
     url(r'^submit_job', view_submit_job),
+    url(r'^c', c),
 ]
