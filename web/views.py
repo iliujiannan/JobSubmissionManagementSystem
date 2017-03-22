@@ -20,8 +20,8 @@ def c(request):
     return render_to_response('createjob.html')
 
 def hide(request):
-
     return render_to_response('admin.html')
+#def allwork(request):
 
 @csrf_exempt
 def view_submit_job(request):
