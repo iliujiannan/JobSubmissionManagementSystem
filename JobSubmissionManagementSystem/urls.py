@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^e', f),
     url(r'^submit_job', view_submit_job),
     url(r'^c', c),
-    url(r'^allword',allwork)
+    url(r'^allwork',allwork),
+    url(r'^therest',)
 ]

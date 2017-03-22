@@ -22,7 +22,6 @@ def c(request):
 
 def hide(request):
     return render_to_response('admin.html')
-#def allwork(request):
 
 @csrf_exempt
 def view_submit_job(request):
@@ -51,3 +50,5 @@ def doLogin(request):
 
 def allwork(request):
     return render_to_response('showwork.html',{'data':getAllJobInfoAsList()})
+def restUser(request):
+    request.GET.get('job_id')

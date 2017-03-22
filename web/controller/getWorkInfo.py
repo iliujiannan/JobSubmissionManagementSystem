@@ -17,7 +17,8 @@ def getAllJobInfoAsList():
             'start_time': i.start_time,
             'end_time': i.end_time,
             'total_num': i.total_num,
-            'submit_num': i.submit_num
+            'submit_num': i.submit_num,
+            'other_num':i.total_num - i.submit_num
         }
         datalist.append(arr)
     return datalist
