@@ -20,10 +20,10 @@ class Job(models.Model):
 
 class JobSubmission(models.Model):
     job_submission_id = models.IntegerField(primary_key=True)
-    student_id = models.IntegerField(max_length=11)
+    student_id = models.IntegerField()
     sub_time = models.DateTimeField()
-    job_id = models.IntegerField(11)
-    flie_name = models.CharField(max_length=255)
+    job_id = models.IntegerField()
+    file_name = models.CharField(max_length=255)
 
 
 

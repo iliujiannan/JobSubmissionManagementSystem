@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from web.views import login,doLogin
+from web.views import login, doLogin, f, view_submit_job
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login', login),
     url(r'^dologin', doLogin),
+    url(r'^e', f),
+    url(r'^submit_job', view_submit_job),
 ]

@@ -22,6 +22,7 @@ def submit_job(student_id, job_id, file):
         return result
     except Exception as e:
         print("sub_error")
+        print(e)
         result = {
             'statues': 0,
             'msg': 'error'
