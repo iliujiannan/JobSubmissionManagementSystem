@@ -5,13 +5,16 @@ from django.shortcuts import render_to_response
 from web.controller.json_tool import dict_to_json
 from web.controller.dologin import login_service
 import json
+from web.controller.SubmitJobService import submit_job
 
 # Create your views here.
 
-def submit_job(request):
+def view_submit_job(request):
     student_id = request.session.get('student_id')
     job_id = request.POST.get('job_id')
     file = request.FILES['file']
+    result = json.dumps(submit_job(student_id, job_id, file))
+
 
 
 
