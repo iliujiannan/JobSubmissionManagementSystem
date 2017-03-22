@@ -1,2 +1,0 @@
-# JobSubmissionManagementSystem
-能帮主大学学习委员快速收电子版作业的作业提交管理系统
