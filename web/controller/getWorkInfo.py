@@ -12,7 +12,7 @@ def getAllJobInfoAsList():
 
     for i in getAllJobInfo():
         arr = {
-            'jobid': i.job_id,
+            'job_id': i.job_id,
             'job_title': i.job_title,
             'start_time': i.start_time,
             'end_time': i.end_time,
@@ -26,4 +26,4 @@ def geAllSubInfoById(jobId):
     return JobSubmission.objects.filter(job_id=jobId)
 
 def getAllJobInfo():
-    return Job.objects
+    return Job.objects.filter().all()

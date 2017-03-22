@@ -50,4 +50,4 @@ def doLogin(request):
        return HttpResponse(dict_to_json(array))
 
 def allwork(request):
-    return render_to_response('showwork.html',)
+    return render_to_response('showwork.html',{'data':getAllJobInfoAsList()})

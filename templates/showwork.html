@@ -7,25 +7,25 @@
 <body>
     <table width="100%">
         <tr>
-            <td>
-                作业id
-            </td>
-            <td>
-                作业名称
-            </td>
-            <td>
-                开始时间
-            </td>
-            <td>
-                结束时间
-            </td>
-            <td>
-                已交人数
-            </td>
-            <td>
-                未交人数
-            </td>
+            <td>作业id</td>
+            <td>作业名称</td>
+            <td>开始时间</td>
+            <td>结束时间</td>
+            <td>已交人数</td>
+            <td>未交人数</td>
         </tr>
+        {% for i in data %}
+        <tr>
+            <td>{% i.job_id %}</td>
+            <td>{% i.job_title %}</td>
+            <td>{% i.start_time %}</td>
+            <td>{% i.end_time %}</td>
+            <td>{% i. %}</td>
+            <td>{% i.job_id %}</td>
+        </tr>
+        {% endfor %}
+
+
     </table>
 </body>
 </html>
