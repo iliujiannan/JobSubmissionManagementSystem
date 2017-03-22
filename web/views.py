@@ -7,6 +7,7 @@ from web.controller.dologin import login_service
 import json
 from web.controller.SubmitJobService import submit_job
 from django.views.decorators.csrf import csrf_exempt
+import web.controller.getWorkInfo
 
 # Create your views here.
 
@@ -47,3 +48,6 @@ def doLogin(request):
        return HttpResponse(dict_to_json(array))
     else:
        return HttpResponse(dict_to_json(array))
+
+def allwork(request):
+    return render_to_response('showwork.html',context=)

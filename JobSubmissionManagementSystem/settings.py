@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'jsms',
         'USER': 'root',
         'PASSWORD': '',
-        'HOST': '127.0.0.1',
+        'HOST': '183.175.10.112',
         'PORT': '3306'
     }
 }

@@ -11,5 +11,5 @@ def getnumberbyid(jobId):
 def geAllSubInfoById(jobId):
     return JobSubmission.objects.filter(job_id=jobId)
 
-def getAllJobInfoById():
+def getAllJobInfo():
     return Job.objects
