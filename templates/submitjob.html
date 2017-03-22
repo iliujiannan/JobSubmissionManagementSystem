@@ -8,6 +8,7 @@
 <form enctype="multipart/form-data" action="/submit_job" method="post">
    <input type="file" name="file" />
    <br/>
+    <input type="hidden" name="id" value="{{ id }}" />
    <input type="submit" value="upload"/>
 </form>
 </body>

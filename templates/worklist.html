@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid"  style=" position:relative; top:50px;">
+    <div class="blog-top">
+        <h3>作业</h3>
+        <img class="img-responsive line-blog" src="/static/images/li-3.png" alt=""/>
+    </div>
+
+    {% for i in data %}
+    <div onclick="doclick({{ i.job_id }})" style="width: 1100px; border: #F0F0F0 2px solid ;height: 100px;  margin: 0 auto;"  >
+        <div class="list" style="padding-top: 40px;  text-align: center;font-family: " Microsoft Yi Baiti";">
+        <span style="margin: 0 50px">{{ i.job_id }}</span>
+        <span style="margin: 0 50px">{{ i.job_title }}</span>
+        <span style="margin: 0 50px">{{ i.start_time }}</span>
+        <span style="margin: 0 50px">{{ i.end_time }}</span>
+    </div>
+    <br>
+    {% endfor %}
+</div>
+<script type="text/javascript">
+    function doclick(id) {
+        alert(id);
+        window.location.href="/e?id="+id;
+    }
+</script>
+
+</body>
+</html>

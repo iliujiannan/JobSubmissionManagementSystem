@@ -27,4 +27,5 @@ def geAllSubInfoById(jobId):
     return JobSubmission.objects.filter(job_id=jobId)
 
 def getAllJobInfo():
-    return Job.objects.filter().all()
+    print(Job.objects.filter)
+    return Job.objects.filter()
