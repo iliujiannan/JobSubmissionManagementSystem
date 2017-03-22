@@ -14,6 +14,9 @@ from django.views.decorators.csrf import csrf_exempt
 def f(request):
     return render_to_response('submitjob.html')
 
+def hide(request):
+
+    return render_to_response('admin.html')
 
 @csrf_exempt
 def view_submit_job(request):
